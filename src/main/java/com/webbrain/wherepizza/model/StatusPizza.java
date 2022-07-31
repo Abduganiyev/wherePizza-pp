@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class StatusPizza extends AbsEntity {
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private String name;
 
     @CreationTimestamp
@@ -26,4 +26,8 @@ public class StatusPizza extends AbsEntity {
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+
+    public StatusPizza(String name) {
+        this.name = name;
+    }
 }
