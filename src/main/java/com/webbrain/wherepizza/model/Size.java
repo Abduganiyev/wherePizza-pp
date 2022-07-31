@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Size extends AbsEntity {
-    @Column(nullable = false)
+    @Column(nullable = false,unique = true)
     private Integer size;
 
     @Column(nullable = false)
@@ -29,4 +29,9 @@ public class Size extends AbsEntity {
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+
+    public Size(Integer size, Double price) {
+        this.size = size;
+        this.price = price;
+    }
 }
