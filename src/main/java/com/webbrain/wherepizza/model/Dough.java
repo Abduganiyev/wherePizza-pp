@@ -21,7 +21,7 @@ public class Dough extends AbsEntity{
     @Column(nullable = false)
     private String name;
 
-    @OneToMany
+    @ManyToMany
     private Set<Size> sizeSet;
 
     @Column(nullable = false)
@@ -32,4 +32,15 @@ public class Dough extends AbsEntity{
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+
+    public Dough(String name, Set<Size> sizeSet, Double price) {
+        this.name = name;
+        this.sizeSet = sizeSet;
+        this.price = price;
+    }
+
+    public Dough(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
 }
