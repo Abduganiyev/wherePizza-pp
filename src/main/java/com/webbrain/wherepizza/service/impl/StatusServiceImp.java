@@ -2,7 +2,7 @@ package com.webbrain.wherepizza.service.impl;
 
 import com.webbrain.wherepizza.dto.StatusPizzaDto;
 import com.webbrain.wherepizza.exception.StatusNotFoundException;
-import com.webbrain.wherepizza.model.StatusPizza;
+import com.webbrain.wherepizza.entity.StatusPizza;
 import com.webbrain.wherepizza.repository.StatusRepository;
 import com.webbrain.wherepizza.service.StatusService;
 import org.springframework.stereotype.Service;

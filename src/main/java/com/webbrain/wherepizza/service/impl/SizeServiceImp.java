@@ -2,7 +2,7 @@ package com.webbrain.wherepizza.service.impl;
 
 import com.webbrain.wherepizza.dto.SizeDto;
 import com.webbrain.wherepizza.exception.SizeNotFoundException;
-import com.webbrain.wherepizza.model.Size;
+import com.webbrain.wherepizza.entity.Size;
 import com.webbrain.wherepizza.repository.SizeRepository;
 import com.webbrain.wherepizza.service.SizeService;
 import org.springframework.stereotype.Service;

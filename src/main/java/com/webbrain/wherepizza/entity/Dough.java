@@ -1,6 +1,6 @@
-package com.webbrain.wherepizza.model;
+package com.webbrain.wherepizza.entity;
 
-import com.webbrain.wherepizza.model.template.AbsEntity;
+import com.webbrain.wherepizza.entity.template.AbsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,7 +10,6 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.*;
 import java.time.LocalDateTime;
-import java.util.List;
 import java.util.Set;
 
 @EqualsAndHashCode(callSuper = true)
@@ -18,30 +17,15 @@ import java.util.Set;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Pizza extends AbsEntity {
+public class Dough extends AbsEntity{
     @Column(nullable = false)
     private String name;
 
-    @Column
-    private String description;
-
     @ManyToMany
-    private Set<Dough> doughSet;
-
-    @ManyToMany
-    private Set<StatusPizza> statusPizzaSet;
-
-    @ManyToMany
-    private List<Attachment> attachmentList;
-
-    @ManyToMany
-    private Set<Ingredients> ingredients;
-
-    @ManyToMany
-    private Set<Ingredients> pizzaAdditionals;
+    private Set<Size> sizeSet;
 
     @Column(nullable = false)
-    private Double total_price;
+    private Double price;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;
@@ -49,4 +33,14 @@ public class Pizza extends AbsEntity {
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
 
+    public Dough(String name, Set<Size> sizeSet, Double price) {
+        this.name = name;
+        this.sizeSet = sizeSet;
+        this.price = price;
+    }
+
+    public Dough(String name, Double price) {
+        this.name = name;
+        this.price = price;
+    }
 }

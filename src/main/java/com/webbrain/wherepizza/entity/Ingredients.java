@@ -1,6 +1,7 @@
-package com.webbrain.wherepizza.model;
+package com.webbrain.wherepizza.entity;
 
-import com.webbrain.wherepizza.model.template.AbsEntity;
+
+import com.webbrain.wherepizza.entity.template.AbsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -10,6 +11,7 @@ import org.hibernate.annotations.UpdateTimestamp;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.OneToOne;
 import java.time.LocalDateTime;
 
 @EqualsAndHashCode(callSuper = true)
@@ -17,11 +19,12 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class Size extends AbsEntity {
+public class Ingredients extends AbsEntity{
     @Column(nullable = false,unique = true)
-    private Integer size;
-
-    @Column(nullable = false)
+    private String name;
+    @OneToOne
+    private Attachment prefix;
+    @Column
     private Double price;
 
     @CreationTimestamp
@@ -30,8 +33,9 @@ public class Size extends AbsEntity {
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
 
-    public Size(Integer size, Double price) {
-        this.size = size;
+    public Ingredients(String name, Attachment prefix, Double price) {
+        this.name = name;
+        this.prefix = prefix;
         this.price = price;
     }
 }
