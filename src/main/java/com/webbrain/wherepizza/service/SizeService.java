@@ -1,7 +1,7 @@
 package com.webbrain.wherepizza.service;
 
 import com.webbrain.wherepizza.dto.SizeDto;
-import com.webbrain.wherepizza.model.Size;
+import com.webbrain.wherepizza.entity.Size;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

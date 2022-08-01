@@ -1,7 +1,7 @@
 package com.webbrain.wherepizza.service;
 
 import com.webbrain.wherepizza.dto.StatusPizzaDto;
-import com.webbrain.wherepizza.model.StatusPizza;
+import com.webbrain.wherepizza.entity.StatusPizza;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

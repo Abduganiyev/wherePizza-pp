@@ -1,6 +1,6 @@
 package com.webbrain.wherepizza.controller;
 
-import com.webbrain.wherepizza.model.Attachment;
+import com.webbrain.wherepizza.entity.Attachment;
 import com.webbrain.wherepizza.response.UploadFileResponse;
 import com.webbrain.wherepizza.service.FileStorageService;
 import lombok.RequiredArgsConstructor;

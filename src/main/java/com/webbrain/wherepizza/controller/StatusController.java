@@ -1,7 +1,7 @@
 package com.webbrain.wherepizza.controller;
 
 import com.webbrain.wherepizza.dto.StatusPizzaDto;
-import com.webbrain.wherepizza.model.StatusPizza;
+import com.webbrain.wherepizza.entity.StatusPizza;
 import com.webbrain.wherepizza.service.StatusService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

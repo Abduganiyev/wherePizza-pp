@@ -2,11 +2,8 @@ package com.webbrain.wherepizza.controller;
 
 import com.webbrain.wherepizza.dto.DoughCreateDto;
 import com.webbrain.wherepizza.dto.DoughDto;
-import com.webbrain.wherepizza.dto.SizeDto;
-import com.webbrain.wherepizza.model.Dough;
-import com.webbrain.wherepizza.model.Size;
+import com.webbrain.wherepizza.entity.Dough;
 import com.webbrain.wherepizza.service.DoughService;
-import com.webbrain.wherepizza.service.SizeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 

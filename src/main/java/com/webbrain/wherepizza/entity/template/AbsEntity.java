@@ -1,4 +1,4 @@
-package com.webbrain.wherepizza.model.template;
+package com.webbrain.wherepizza.entity.template;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
