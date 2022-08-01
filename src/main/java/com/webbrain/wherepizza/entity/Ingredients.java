@@ -22,10 +22,8 @@ import java.time.LocalDateTime;
 public class Ingredients extends AbsEntity{
     @Column(nullable = false,unique = true)
     private String name;
-
     @OneToOne
     private Attachment prefix;
-
     @Column
     private Double price;
 

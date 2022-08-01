@@ -54,11 +54,9 @@ public class Attachment extends AbsEntity{
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
 
-    public Attachment(Long id, String name, String originalName, byte[] data, long size, String contentType) {
+    public Attachment(Long id, String name, long size, String contentType) {
         super(id);
         this.name = name;
-        this.originalName = originalName;
-        this.data = data;
         this.size = size;
         this.contentType = contentType;
     }
