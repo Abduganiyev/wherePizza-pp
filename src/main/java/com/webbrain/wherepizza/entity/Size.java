@@ -1,6 +1,6 @@
-package com.webbrain.wherepizza.model;
+package com.webbrain.wherepizza.entity;
 
-import com.webbrain.wherepizza.model.template.AbsEntity;
+import com.webbrain.wherepizza.entity.template.AbsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
@@ -17,9 +17,12 @@ import java.time.LocalDateTime;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class StatusPizza extends AbsEntity {
+public class Size extends AbsEntity {
     @Column(nullable = false,unique = true)
-    private String name;
+    private Integer size;
+
+    @Column(nullable = false)
+    private Double price;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;
@@ -27,7 +30,8 @@ public class StatusPizza extends AbsEntity {
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
 
-    public StatusPizza(String name) {
-        this.name = name;
+    public Size(Integer size, Double price) {
+        this.size = size;
+        this.price = price;
     }
 }

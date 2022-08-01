@@ -2,7 +2,7 @@ package com.webbrain.wherepizza.service;
 
 import com.webbrain.wherepizza.dto.DoughCreateDto;
 import com.webbrain.wherepizza.dto.DoughDto;
-import com.webbrain.wherepizza.model.Dough;
+import com.webbrain.wherepizza.entity.Dough;
 import org.springframework.stereotype.Service;
 
 import java.util.List;

@@ -1,6 +1,6 @@
 package com.webbrain.wherepizza.service;
 
-import com.webbrain.wherepizza.model.Attachment;
+import com.webbrain.wherepizza.entity.Attachment;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 

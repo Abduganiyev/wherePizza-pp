@@ -1,7 +1,7 @@
 package com.webbrain.wherepizza.controller;
 
 import com.webbrain.wherepizza.dto.SizeDto;
-import com.webbrain.wherepizza.model.Size;
+import com.webbrain.wherepizza.entity.Size;
 import com.webbrain.wherepizza.service.SizeService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;

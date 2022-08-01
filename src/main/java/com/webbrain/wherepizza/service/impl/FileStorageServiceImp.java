@@ -1,20 +1,13 @@
 package com.webbrain.wherepizza.service.impl;
 
 import com.webbrain.wherepizza.exception.FileStorageException;
-import com.webbrain.wherepizza.model.Attachment;
+import com.webbrain.wherepizza.entity.Attachment;
 import com.webbrain.wherepizza.repository.AttachmentRepository;
 import com.webbrain.wherepizza.service.FileStorageService;
-import org.springframework.core.io.Resource;
-import org.springframework.core.io.UrlResource;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.io.IOException;
-import java.net.MalformedURLException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.StandardCopyOption;
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 

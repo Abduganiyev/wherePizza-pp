@@ -1,6 +1,6 @@
 package com.webbrain.wherepizza.response;
 
-import com.webbrain.wherepizza.model.template.AbsEntity;
+import com.webbrain.wherepizza.entity.template.AbsEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.EqualsAndHashCode;
