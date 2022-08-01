@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Attachment extends AbsEntity{
-    @Column
+/*    @Column
     private String name;
 
     @Column
@@ -34,11 +34,40 @@ public class Attachment extends AbsEntity{
     private Boolean status;
 
     @Column
-    private String path;
+    private String path;*/
+    @Column(nullable = false, unique = true)
+    private String name;
+
+    @Column(nullable = false)
+    private String originalName;
+
+    private byte[] data;
+
+    private long size;
+
+    @Column(nullable = false)
+    private String contentType;
 
     @CreationTimestamp
     private LocalDateTime createDateTime;
 
     @UpdateTimestamp
     private LocalDateTime updateDateTime;
+
+    public Attachment(Long id, String name, String originalName, byte[] data, long size, String contentType) {
+        super(id);
+        this.name = name;
+        this.originalName = originalName;
+        this.data = data;
+        this.size = size;
+        this.contentType = contentType;
+    }
+
+    public Attachment(String name, String originalName, byte[] data, long size, String contentType) {
+        this.name = name;
+        this.originalName = originalName;
+        this.data = data;
+        this.size = size;
+        this.contentType = contentType;
+    }
 }
