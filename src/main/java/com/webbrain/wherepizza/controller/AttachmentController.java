@@ -27,7 +27,7 @@ public class AttachmentController {
         Attachment uploadFile = fileStorageService.uploadFileToDB(multipartFile);
 
         String downloadUrl = ServletUriComponentsBuilder.fromCurrentContextPath().path("/api/v1/attachments/database/download_file/").path(uploadFile.getId().toString()).toUriString();
-        return new UploadFileResponse(uploadFile.getOriginalName(), downloadUrl, multipartFile.getContentType(), multipartFile.getSize());
+        return new UploadFileResponse(uploadFile.getId(), uploadFile.getOriginalName(), downloadUrl, multipartFile.getContentType(), multipartFile.getSize());
     }
 
     @PostMapping(value = "/upload_files", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
